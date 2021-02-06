@@ -1,3 +1,3 @@
 FROM alpine
-RUN copy sshd_config /etc/ssh/sshd_config
+RUN apk add --no-cache curl wget busybox-extras netcat-openbsd openrc python py-pip bash
 CMD tail -f /dev/null
