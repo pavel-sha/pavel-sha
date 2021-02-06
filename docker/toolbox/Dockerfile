@@ -1,4 +1,3 @@
 FROM alpine
-RUN pip install awscli
-RUN apk --purge -v del py-pip
+RUN COPY sshd_config /etc/ssh/sshd_config
 CMD tail -f /dev/null
